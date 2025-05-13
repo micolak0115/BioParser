@@ -6,12 +6,14 @@ import re
 from collections import Counter
 from itertools import chain
 
+
 class File:
     def __init__(self, path_input_file, sep, is_gzip, header_startswith):
         self.path_input_file = path_input_file
         self.sep = sep
         self.is_gzip = is_gzip
         self.header_startswith = header_startswith
+        self.header = None
         self.file_reader = None
         self.set_file_reader()
 
